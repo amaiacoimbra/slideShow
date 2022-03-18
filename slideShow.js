@@ -10,9 +10,11 @@ const images = [
     {'id': '7', 'url':'./img/7.jpg'},
 ]
 
-const loadIMAGES = (images) => {
-    
+const container = document.querySelector('.container-items')
+
+const loadIMAGES = ( images, container ) => {
+
 }
 
-loadImages(images)
+loadImages( images, container)
 
