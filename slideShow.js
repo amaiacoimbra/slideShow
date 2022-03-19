@@ -10,11 +10,18 @@ const images = [
     {'id': '7', 'url':'./img/7.jpg'},
 ]
 
-const container = document.querySelector('.container-items')
+const container = document.querySelector('#container-items')
 
 const loadIMAGES = ( images, container ) => {
-
+    images.forEach (image => {
+        container.innerHTML += `
+            <div class = 'item' >
+                <img src = '${image.url}'
+            </div>
+        `
+    })
 }
 
 loadImages( images, container)
 
+// 05:42 https://www.youtube.com/watch?v=csNYVAS2ex8&t=11s
