@@ -10,9 +10,9 @@ const images = [
     {'id': '7', 'url':'./img/7.jpg'},
 ]
 
-const container = document.querySelector('#container-items')
+const containerItems = document.querySelector('#container-items')
 
-const loadIMAGES = ( images, container ) => {
+const loadImages = ( images, container ) => {
     images.forEach (image => {
         container.innerHTML += `
             <div class = 'item' >
@@ -22,6 +22,21 @@ const loadIMAGES = ( images, container ) => {
     })
 }
 
-loadImages( images, container)
+loadImages( images, containerItems)
 
-// 18:24 https://www.youtube.com/watch?v=csNYVAS2ex8&t=11s
+let items = document.querySelectorAll('.item')
+
+const next = () => {
+    containerItems.appendChild(items[0])
+    items = document.querySelectorAll('.item')
+}
+    
+const previous = () => {
+    const lastItem = items[items.length - 1]
+    containerItems.insertBefore(lastItem, items[0])
+    items = document.querySelectorAll('.item')
+}
+
+document.querySelector('#next').addEventListener('click', next)
+document.querySelector('#previous').addEventListener('click', previous)
+
