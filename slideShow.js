@@ -24,4 +24,4 @@ const loadIMAGES = ( images, container ) => {
 
 loadImages( images, container)
 
-// 13:44 https://www.youtube.com/watch?v=csNYVAS2ex8&t=11s
+// 18:24 https://www.youtube.com/watch?v=csNYVAS2ex8&t=11s
